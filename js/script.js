@@ -23,12 +23,14 @@ createApp({
   },
 
   methods: {
-    deleTe (index){
-      this.toDolist.splice(index,1)
+    deleTe (elemento,index){
+      if(elemento.done===true){
+        this.toDolist.splice(index,1)
+      }
     },  
     
     aDD (){
-      if(this.newTask.length >5){
+      if(this.newTask.length > 5){
         const newElement = {text:this.newTask, done:false}
         this.toDolist.unshift(newElement)
         this.newTask = '';

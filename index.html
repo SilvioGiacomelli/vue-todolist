@@ -46,10 +46,13 @@
       <ul>
         <li v-for="(elemento, index) in toDolist">
           <span
+          @click="elemento.done = !elemento.done"
           :class="{'done':elemento.done===true}"
           >
           {{elemento.text}}</span>
-          <i @click="deleTe(index)" class="fa-solid fa-trash-can"></i>
+          <i 
+          @click="deleTe(elemento, index)" 
+          class="fa-solid fa-trash-can"></i>
         </li>
       </ul>
 
