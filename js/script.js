@@ -16,14 +16,21 @@ createApp({
           text: 'guardare un film',
           done: true,
         }
-      ],    
+      ],  
+      newTask:'',
+
     }
   },
 
   methods: {
     deleTe (index){
       this.toDolist.splice(index,1)
-    }   
+    },  
+    
+    aDD (){
+      const newElement = {text:this.newTask, done:false};
+      this.toDolist.unshift(newElement)
+    }
   },
 
 }).mount('#app');
