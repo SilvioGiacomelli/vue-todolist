@@ -20,7 +20,11 @@ createApp({
     }
   },
 
-  
+  methods: {
+    deleTe (index){
+      this.toDolist.splice(index,1)
+    }   
+  },
 
 }).mount('#app');
 
