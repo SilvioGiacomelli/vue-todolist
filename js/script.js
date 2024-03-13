@@ -18,7 +18,7 @@ createApp({
         }
       ],  
       newTask:'',
-
+      msgErr:'',
     }
   },
 
@@ -28,9 +28,14 @@ createApp({
     },  
     
     aDD (){
-      const newElement = {text:this.newTask, done:false};
-      this.toDolist.unshift(newElement);
-      this.newTask = ''
+      if(this.newTask.length >5){
+        const newElement = {text:this.newTask, done:false}
+        this.toDolist.unshift(newElement)
+        this.newTask = '';
+        this.msgErr = '';
+      }else{
+        this.msgErr = 'Attenzione inserisci 5 caratteri';
+      }
     }
   },
 
