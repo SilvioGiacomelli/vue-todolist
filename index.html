@@ -43,7 +43,9 @@
 
     <div class="task-container">
 
-      <ul>
+      <ul
+      v-if="toDolist.length > 0"
+      >
         <li v-for="(elemento, index) in toDolist">
           <span
           @click="elemento.done = !elemento.done"
@@ -55,6 +57,10 @@
           class="fa-solid fa-trash-can"></i>
         </li>
       </ul>
+      <p
+      v-else 
+      >Hai fatto tutto, Complimenti!
+    </p>
     </div>
   </div>
 

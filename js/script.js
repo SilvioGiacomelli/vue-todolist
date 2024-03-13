@@ -40,6 +40,12 @@ createApp({
       }else{
         this.msgErr = 'Attenzione inserisci 5 caratteri';
       }
+    },
+
+    errOR (){
+      if(toDolist.length === 0){
+        alert('non cè nulla nella lista')        
+      }
     }
   },
 
