@@ -26,6 +26,8 @@ createApp({
     deleTe (elemento,index){
       if(elemento.done===true){
         this.toDolist.splice(index,1)
+      }else{
+        alert('Non hai completato il compito')
       }
     },  
     
