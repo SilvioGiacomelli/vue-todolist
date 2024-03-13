@@ -42,11 +42,6 @@ createApp({
       }
     },
 
-    errOR (){
-      if(toDolist.length === 0){
-        alert('non cè nulla nella lista')        
-      }
-    }
   },
 
 }).mount('#app');
