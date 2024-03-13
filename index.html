@@ -39,7 +39,10 @@
 
       <ul>
         <li v-for="(elemento, index) in toDolist">
-          <span>{{elemento.text}}</span>
+          <span
+          :class="{'done':elemento.done===true}"
+          >
+          {{elemento.text}}</span>
           <i class="fa-solid fa-trash-can"></i>
         </li>
       </ul>
